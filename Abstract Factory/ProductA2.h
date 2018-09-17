@@ -1,5 +1,4 @@
-#ifndef PRODUCTA2_H
-#define PRODUCTA2_H
+#pragma once
 
 #include <iostream>
 
@@ -13,5 +12,3 @@ public:
     std::cout << "I'm product A2!" << std::endl;
   };
 };
-
-#endif // PRODUCTA2_H

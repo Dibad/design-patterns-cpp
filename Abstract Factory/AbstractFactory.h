@@ -1,5 +1,4 @@
-#ifndef ABSTRACTFACTORY_H
-#define ABSTRACTFACTORY_H
+#pragma once
 
 class AbstractProductA;
 class AbstractProductB;
@@ -11,5 +10,3 @@ public:
   virtual AbstractProductA *CreateProductA() const = 0;
   virtual AbstractProductB *CreateProductB() const = 0;
 };
-
-#endif // ABSTRACTFACTORY_H

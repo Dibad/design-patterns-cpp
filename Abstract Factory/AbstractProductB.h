@@ -1,5 +1,4 @@
-#ifndef ABSTRACTPRODUCTB_H
-#define ABSTRACTPRODUCTB_H
+#pragma once
 
 class AbstractProductB {
 public:
@@ -7,5 +6,3 @@ public:
 
   virtual void information() const = 0;
 };
-
-#endif  // ABSTRACTPRODUCTB_H

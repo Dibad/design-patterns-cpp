@@ -1,5 +1,4 @@
-#ifndef CONCRETEFACTORY1_H
-#define CONCRETEFACTORY1_H
+#pragma once
 
 #include "AbstractFactory.h"
 #include "ProductA1.h"
@@ -12,4 +11,3 @@ public:
   ProductA1 *CreateProductA() const override final { return new ProductA1; }
   ProductB1 *CreateProductB() const override final { return new ProductB1; }
 };
-#endif // CONCRETEFACTORY1_H

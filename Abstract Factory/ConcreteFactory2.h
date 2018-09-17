@@ -1,5 +1,4 @@
-#ifndef CONCRETEFACTORY2_H
-#define CONCRETEFACTORY2_H
+#pragma once
 
 #include "AbstractFactory.h"
 #include "ProductA2.h"
@@ -12,4 +11,3 @@ public:
   virtual ProductA2 *CreateProductA() const override { return new ProductA2; }
   virtual ProductB2 *CreateProductB() const override { return new ProductB2; }
 };
-#endif // CONCRETEFACTORY2_H
