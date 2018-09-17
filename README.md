@@ -1,2 +1,4 @@
-# design-patterns-cpp
-Implementation of Design Patterns from the GOF book
+# Design Patterns C++
+
+## Creational Patterns
+* [Abstract Factory](https://github.com/Dibad/design-patterns-cpp/tree/master/Abstract%20Factory)
