@@ -1,7 +1,7 @@
 #include <memory>
 
-#include "Factory1.h"
-#include "Factory2.h"
+#include "ConcreteFactory1.h"
+#include "ConcreteFactory2.h"
 
 void products(const std::unique_ptr<AbstractFactory>& af) {
   auto pa = af->CreateProductA();
@@ -17,11 +17,11 @@ void products(const std::unique_ptr<AbstractFactory>& af) {
 int main() {
 
   std::cout << "Instantiation of a type 1 factory" << std::endl;
-  std::unique_ptr<AbstractFactory> af(new Factory1);
+  std::unique_ptr<AbstractFactory> af(new ConcreteFactory1);
   products(af);
 
   std::cout << "Instantiation of a type 2 factory" << std::endl;
-  af.reset(new Factory2);
+  af.reset(new ConcreteFactory2);
   products(af);
 
   return 0;

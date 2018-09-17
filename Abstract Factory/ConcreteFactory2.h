@@ -5,9 +5,9 @@
 #include "ProductA2.h"
 #include "ProductB2.h"
 
-class Factory2 : public AbstractFactory {
+class ConcreteFactory2 : public AbstractFactory {
 public:
-  virtual ~Factory2() = default;
+  virtual ~ConcreteFactory2() = default;
 
   virtual ProductA2 *CreateProductA() const override { return new ProductA2; }
   virtual ProductB2 *CreateProductB() const override { return new ProductB2; }
