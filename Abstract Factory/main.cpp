@@ -4,14 +4,11 @@
 #include "ConcreteFactory2.h"
 
 void products(const std::unique_ptr<AbstractFactory>& af) {
-  auto pa = af->CreateProductA();
-  auto pb = af->CreateProductB();
+  std::unique_ptr<AbstractProductA> pa(af->CreateProductA());
+  std::unique_ptr<AbstractProductB> pb(af->CreateProductB());
 
   pa->information();
   pb->information();
-
-  delete pa;
-  delete pb;
 }
 
 int main() {
