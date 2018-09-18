@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 template <class T> class Singleton {
 public:
   Singleton(const Singleton &) = delete;
