@@ -20,7 +20,8 @@ public:
   virtual void add(Component *const c) override { leafs_.push_back(c); }
 
   virtual void remove(Component *const c) override {
-    leafs_.erase(std::find(leafs_.cbegin(), leafs_.cend(), c));
+    auto p = leafs_.erase(std::find(leafs_.cbegin(), leafs_.cend(), c));
+    delete *p;
   }
 
   virtual Composite *getChild(int i) const override {
