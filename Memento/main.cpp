@@ -12,17 +12,17 @@ int main() {
   doublestate1.execute();
   orig.printState();
 
-  doublestate2.undo();
+  Command::undo();
   orig.printState();
 
   doublestate2.execute();
   doublestate2.execute();
   orig.printState();
 
-  doublestate1.undo();
-  doublestate1.undo();
-  doublestate1.undo();
-  doublestate1.undo();
+  Command::undo();
+  Command::undo();
+  Command::undo();
+  Command::undo();
   orig.printState();
 
   return 0;
