@@ -3,7 +3,6 @@
 #include "abstractExpression.h"
 
 class NonterminalExpression : public AbstractExpression {
-public:
   explicit NonterminalExpression(AbstractExpression *exp1,
                                  AbstractExpression *exp2)
       : expression1_(exp1), expression2_(exp2) {}
