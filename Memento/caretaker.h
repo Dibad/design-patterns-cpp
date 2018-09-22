@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <memory>
 #include <vector>
 
 #include "memento.h"
@@ -23,7 +24,6 @@ public:
     std::cout << "Undo..." << std::endl;
     if (!mementos_.empty()) {
       commands_.back()->originator_.setMemento(mementos_.back());
-      delete mementos_.back();
       mementos_.pop_back();
       commands_.pop_back();
     } else {
@@ -33,8 +33,8 @@ public:
 
   Originator &originator_;
   static std::vector<Command *> commands_;
-  static std::vector<Memento *> mementos_;
+  static std::vector<Memento> mementos_;
 };
 
-std::vector<Command *> Command::commands_ = std::vector<Command *>();
-std::vector<Memento *> Command::mementos_ = std::vector<Memento *>();
+std::vector<Command *> Command::commands_;
+std::vector<Memento> Command::mementos_;
