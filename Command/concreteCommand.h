@@ -5,7 +5,7 @@
 
 class ConcreteCommand : public Command {
 public:
-  explicit ConcreteCommand(Receiver &receiver)
+  explicit ConcreteCommand(const Receiver &receiver)
       : receiver_(receiver), last_state_(0) {}
 
   virtual ~ConcreteCommand() = default;
@@ -23,5 +23,6 @@ public:
 
 private:
   Receiver &receiver_;
+
   mutable int last_state_;
 };
