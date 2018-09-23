@@ -15,3 +15,16 @@
 * [Facade](/Facade)
 * [Flyweight](/Flyweight)
 * [Proxy](/Proxy)
+
+### Behavioral Patterns
+* [Chain Of Responsability](/Chain%20of%20Responsability)
+* [Command](/Command)
+* [Interpreter](/Interpreter)
+* [Iterator](/Iterator)
+* [Mediator](/Mediator)
+* [Memento](/Memento)
+* [Observer](/Observer)
+* [State](/State)
+* [Strategy](/Strategy)
+* [Template Method](/Template%20Method)
+* [Visitor](/Visitor)
