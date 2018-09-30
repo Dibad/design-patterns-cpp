@@ -8,6 +8,6 @@ class ConcreteFactory2 : public AbstractFactory {
 public:
   virtual ~ConcreteFactory2() = default;
 
-  virtual ProductA2 *CreateProductA() const override { return new ProductA2; }
-  virtual ProductB2 *CreateProductB() const override { return new ProductB2; }
+  ProductA2 *CreateProductA() const override { return new ProductA2; }
+  ProductB2 *CreateProductB() const override { return new ProductB2; }
 };

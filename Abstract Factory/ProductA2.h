@@ -8,7 +8,7 @@ class ProductA2 : public AbstractProductA {
 public:
   virtual ~ProductA2() = default;
 
-  void information() const override final {
+  void information() const override {
     std::cout << "I'm product A2!" << std::endl;
   };
 };
