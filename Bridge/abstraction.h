@@ -1,20 +1,22 @@
 #pragma once
 
+#include <memory>
+
 #include "implementor.h"
 
 class Abstraction {
 public:
-  explicit Abstraction(Implementor *imp) : imp_(imp) {}
-  virtual ~Abstraction() { delete imp_; }
+  explicit Abstraction(std::unique_ptr<Implementor> imp)
+    : imp_(std::move(imp)) {}
+
+  virtual ~Abstraction() = default;
 
   void operation() const { imp_->operationImp(); }
 
-  void changeImplementor(Implementor *imp) {
-    if (!imp_)
-      delete imp_;
-    imp_ = imp;
+  void changeImplementor(std::unique_ptr<Implementor> imp) {
+    imp_ = std::move(imp);
   }
 
 private:
-  Implementor *imp_;
+  std::unique_ptr<Implementor> imp_;
 };

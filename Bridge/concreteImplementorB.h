@@ -8,7 +8,7 @@ class ConcreteImplementorB : public Implementor {
 public:
   virtual ~ConcreteImplementorB() = default;
 
-  void operationImp() const final {
+  virtual void operationImp() const {
     std::cout << "Concrete operation B!" << std::endl;
   }
 };
